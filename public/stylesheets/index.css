@@ -12,7 +12,7 @@
 }
 
 .message-container{
-  white-space:pre;
+  white-space:pre-line;
 }
 
 .inner-container{
