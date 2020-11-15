@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <title>Members Only | {{title}}</title>
+    <link rel = "stylesheet" href = "/stylesheets/bootstrap.css">
+    <link rel = "stylesheet" href = "/stylesheets/common.css">
+    {{#if stylesheet}} <link rel = "stylesheet" href = "/stylesheets/{{stylesheet}}.css"> {{/if}}
+  </head>
+  <body>
+    <header>
+      <nav class = "navbar navbar-default">
+        <div class = "container-fluid">
+	  <div class = "navbar-header">
+	    <a class = "navbar-brand" href="/">
+	      <strong>Members Only</strong>  &nbsp;
+	      <span class = "glyphicon glyphicon-sunglasses"> </span>
+	    </a>
+	  </div>
+	  <ul class="nav navbar-right navbar-nav">
+	    {{#if user}}
+	      <li>
+		<a href = "/create-message"> 
+		  <span style = "color:#5cb85c" class = "glyphicon glyphicon-envelope"></span> &nbsp;
+		  <strong>Create Message</strong>
+		</a>
+	      </li>
+	      <li>
+		<a href = "/become-member"> 
+		  <span style = "color:#d9534f"  class = "glyphicon glyphicon-heart"></span> &nbsp;
+		  <strong>Become Member</strong>
+		</a>
+	      </li>
+	      <li>
+		<a href = "/become-admin"> 
+		  <span style = "color:#f0ad4e" class = "glyphicon glyphicon-fire"></span> &nbsp;
+		  <strong>Become Admin</strong>
+		</a>
+	      </li>
+	      <li>
+		<a href = "/logout"> 
+		  <span style = "color:#0275d8" class = "glyphicon glyphicon-log-out"></span> &nbsp;
+		  <strong>Log Out</strong>
+		</a>
+	      </li>
+	    {{else}}
+	      <li>
+		<a href = "/login">
+		  <span style = "color:#0275d8" class = "glyphicon glyphicon-log-in"></span> &nbsp;
+		  <strong>Log In</strong>
+		</a>
+	      </li>
+	      <li>
+		<a href = "/signup">
+		  <span style = "color:#0275d8" class = "glyphicon glyphicon-log-in"></span> &nbsp;
+		  <strong>Sign Up</strong>
+		</a>
+	      </li>
+	    {{/if}}
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class = "container-fluid">
+      <div class = "row">
+	<div class = "col-xs-1 col-sm-1 col-md-1"></div>
+	<div class = "col-xs-10 col-sm-10 col-md-10">
+	  <div class = "page-container">{{{body}}}</div>
+	 </div>
+	<div class = "col-xs-1 col-sm-1 col-md-1"></div>
+      </div>
+      <footer class = "row">
+	<div class = "col-xs-5 col-sm-5 col-md-5 user-container">
+	  {{#if user}}
+	    <span style = "color:#0275d8" class = "glyphicon glyphicon-user"></span> &nbsp;
+	    <strong>{{user.username}}</strong>
+	  {{/if}}
+	</div>
+	<div class = "col-xs-2 col-sm-2 col-md-2"> </div>
+	<div class = "col-xs-5 col-sm-5 col-md-5 author-container">
+	  <strong> A project by atifcppprogrammer </strong> &nbsp; 
+	  <a href = "https://github.com/atifcppprogrammer/members-only">
+	    <img src = "/images/others/github.svg">
+	  </a>
+	</div>
+      </footer>
+    </div>
+  </body>
+  <script src = "/javascripts/jquery.js"></script>
+  <script src = "/javascripts/bootstrap.js"></script>
+  {{#if javascript}} <script src = "/javascripts/{{javascript}}.js"></script> {{/if}}
+</html>

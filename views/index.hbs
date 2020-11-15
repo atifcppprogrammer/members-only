@@ -1,0 +1,44 @@
+{{#if messages}}
+  {{#each messages}}
+    <div class = "app-container">
+      <div class = "main-container">
+	<div class = "image-container">
+	  <img src = "/images/avatars/{{this.avatar}}.svg">
+	</div>
+	<div class = "content-container">
+	  <h3>{{this.title}}</h3>
+	  <div class = "message-container">{{this.message}}</div>
+	  <div class = "inner-container">
+	    <div class = "date-container"> 
+	      <span class = "glyphicon glyphicon-time"></span> &nbsp;
+	      <strong>{{this.date}}</strong>
+	    </div>
+	    <div class = "name-container"> 
+	      <span class = "glyphicon glyphicon-user"></span> &nbsp;
+	      <strong>{{#if this.user}}{{this.user}}{{else}}unknown{{/if}}</strong>
+	    </div>
+	  </div>
+	</div>
+      </div>
+      <div class = "button-container">
+	{{#if canBeDeleted }}
+	  <button class = "btn btn-danger">
+	    <span class="glyphicon glyphicon-trash"></span> &nbsp; Delete
+	  </button>
+	{{/if}}
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <div class = "app-container">
+   <div class = "main-container">
+      <div class = "image-container">
+	<img src = "/images/emojis/grinning.svg">
+      </div>
+      <div class = "content-container">
+	<h3> <strong> No messages to display here mate !</strong> </h3>
+      </div>
+    </div>
+  </div>
+{{/if}}
+

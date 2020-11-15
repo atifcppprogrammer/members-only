@@ -1,0 +1,9 @@
+@import url("/stylesheets/signupOrLogin.css");
+
+.image-container > img {
+  width:30%;
+}
+
+.form-container{
+  width:45%;
+}

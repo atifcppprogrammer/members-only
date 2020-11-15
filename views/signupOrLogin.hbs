@@ -1,0 +1,18 @@
+<div class = "form-container">
+  <div class = "image-container">
+    <h3>Members Only {{#if signup}} Signup {{else}} Login {{/if}} !</h3>
+    <img src = "/images/emojis/spy.svg">
+  </div>
+  <form method = "post">
+    <div class = "form-group">
+      <input class = "form-control" type = "text"     name = "username" placeholder = "Enter Username" required> <br>
+      <input class = "form-control" type = "password" name = "password" placeholder = "Enter Password" required> <br>
+      {{#if signup}}
+	<input class = "form-control" type = "password" name = "confirmPassword" placeholder = "Enter Confirmed Password" required> <br>
+      {{/if}}
+      <button class = "btn btn-warning" type = "submit"> 
+	<span class = "glyphicon glyphicon-log-in"></span> &nbsp; {{#if signup}} Signup {{else}} Login {{/if}}
+      </button>
+    </div>
+  </form>
+</div>

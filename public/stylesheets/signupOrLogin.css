@@ -1,0 +1,23 @@
+.image-container > img {
+  height:auto;
+  width:45%;
+  margin:5%;
+}
+
+.form-container{
+  box-shadow: 5px 5px 5px #141414;
+  background-color:#141414;
+  border-radius:20px;
+  margin-top:20px;
+  margin-right:auto;
+  margin-left:auto;
+  padding:20px;
+  width:30%;
+}
+
+.form-control{
+  background-color:#1c1c1c;
+  border-radius:20px;
+  border-color:#1c1c1c;
+  color:#ebebeb;
+}

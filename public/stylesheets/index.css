@@ -1,0 +1,26 @@
+.date-container, .message-container, .name-container{
+  background-color:#1c1c1c;
+  word-break:break-word;
+  border-radius:20px;
+  padding:4%;
+}
+
+.date-container, .name-container{
+  font-size:11px;
+  float:right;
+  margin:2%;
+}
+
+.message-container{
+  white-space:pre;
+}
+
+.inner-container{
+  margin-top:4%;
+  float:right;
+}
+
+.app-container:hover{
+  animation:emphasis 0.4s ease-in-out 0s 1 forwards;
+}
+

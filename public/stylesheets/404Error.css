@@ -1,0 +1,19 @@
+.image-container{
+  text-align:right;
+}
+
+.content-container{
+  text-align:left;
+}
+
+.app-container:hover{
+  animation-play-state:paused;
+}
+
+.app-container{
+  animation:bounce 0.8s ease-in-out 0s infinite forwards;
+  border-radius:50px;
+  margin-top:150px;
+  width:40%;
+}
+
