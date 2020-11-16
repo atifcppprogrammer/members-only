@@ -65,7 +65,7 @@ exports.serveHomePageView = async (req, res, next) => {
   if (result.error) return next(result.error);
 
   const { documents } = result;
-  const messages = assignPermissionsTo(documents.reverse(), req.user);
+  const messages = assignPermissionsTo(documents, req.user);
   renderTemplate(res, 'index', { title: 'Index', messages }, false);
 }
 
