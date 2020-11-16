@@ -15,11 +15,15 @@ const getRandomAvatarForUser = () => {
 
 const getDateForMessage = () => {
   const dateObject = new Date();
-  const date = dateObject.toLocaleString('pk').split(',').shift();
-  const time = dateObject.toLocaleString('pk').split(',').pop();
-  const amOrPm = time.split(' ').pop();
-  const trimmedTime = time.split(':').slice(0, 2).join(':');
-  return `${date.replace(/\//g,'-')} @${trimmedTime} ${amOrPm}`;
+  const month = dateObject.getMonth() + 1;
+  const year  = dateObject.getFullYear();
+  const date  = dateObject.getDate();
+  const dateString = `${year}-${month}-${date}`;
+
+  const asUTC = dateObject.toUTCString();
+  const timeString = asUTC.split(' ')[4].split(':').slice(0,2).join(':');
+  return `${dateString} @ ${timeString}`;
+  
 }
 
 exports.assignPermissionsTo = (messages, user) => 
