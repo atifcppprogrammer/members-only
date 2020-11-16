@@ -15,8 +15,8 @@ const getRandomAvatarForUser = () => {
 
 const getDateForMessage = () => {
   const dateObject = new Date();
-  const date = dateObject.toLocaleString().split(',').shift();
-  const time = dateObject.toLocaleString().split(',').pop();
+  const date = dateObject.toLocaleString('pk').split(',').shift();
+  const time = dateObject.toLocaleString('pk').split(',').pop();
   const amOrPm = time.split(' ').pop();
   const trimmedTime = time.split(':').slice(0, 2).join(':');
   return `${date.replace(/\//g,'-')} @${trimmedTime} ${amOrPm}`;
